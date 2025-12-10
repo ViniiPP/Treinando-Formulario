@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NO:wght@100..400&display=swap');
+ 
+ * {
+  font-family: Arial, Helvetica, sans-serif;
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ :root {
+    --primary-color: #28a745;
+    --primary-color-dark: #208337;
+    --input-border-color: #ccc;
+    --input-focus-border-color: #28a745;
+    --button-text-color: #fff;
+    --link-color: #000;
+    --font-text: Arial, sans-serif;
+    --font-title: 'Playwrite NO', sans-serif;
+ }
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('fundo.jpg');
+    background-size: cover;
+}
+/* estilo do container com efeito de vidro */
+.container {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8.5px);
+  -webkit-backdrop-filter: blur(8.5px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 30px;
+  width: 450px;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-header h1 {
+  font-family: var(--font-title);
+  font-size: 25px;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+}
+
+.form-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-input label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-input input {
+  padding: 10px;
+  border: 1px solid var(--input-border-color);
+  border-radius: 7px;
+  font-size: 16px;
+  height: 45px;
+  background: rgb(255, 255, 255, 0.3);
+}
+input::placeholder {
+  color: #666;
+}
+
+.form-input input:focus {
+  border-color: var(--input-focus-border-color);
+  outline: none;
+}
+
+.form-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.form-button button {
+  padding: 10px 20px;
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-button button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.form-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.form-link a {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.form-link span {
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.form-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .form-header h1 {
+    font-size: 23px;
+  }
+  .container {
+    width: 100%;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+}
